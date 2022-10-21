@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  font-family: "Roboto";
+}
+
+p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #666666;
+  letter-spacing: -0.015rem;
+}
+
+body {
+  padding: 123px 119px 1298px 120px;
+  background: #ffffff;
+}
+
+.top-section {
+  margin-bottom: 64px;
+}
+.top-section .card-section {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(6, 1fr);
+  margin-bottom: 24px;
+}
+.top-section .card-section .card {
+  background-color: #ffffff;
+  display: flex;
+  height: 171px;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 4px 8px 24px rgba(204, 204, 204, 0.25);
+}
+.top-section .info-section {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 21px;
+}
+.top-section .info-section .intro,
+.top-section .info-section .person-info,
+.top-section .info-section .date-time {
+  border: 1px solid #2159ab;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  padding: 16px;
+  height: 171px;
+  background-color: #ffffff;
+}
+.top-section .info-section .intro {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+.top-section .info-section .intro-img img {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+}
+.top-section .info-section .intro-name {
+  color: black;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  font-family: "Nunito Sans";
+}
+.top-section .info-section .person-info {
+  display: grid;
+}
+.top-section .info-section .person-info-title {
+  font-size: 16px;
+  line-height: 18.75px;
+  margin-bottom: 16px;
+}
+.top-section .info-section .person-info-description {
+  font-size: 14px;
+  line-height: 21px;
+  color: #666666;
+}
+.top-section .info-section .person-info-date {
+  text-align: end;
+  color: #666666;
+  margin-top: 27px;
+  font-size: 12px;
+  line-height: 14px;
+}
+.top-section .info-section .date-time {
+  display: grid;
+  position: relative;
+  font-size: 12px;
+  line-height: 14px;
+  color: #666666;
+}
+.top-section .info-section .date-time .date {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+}
+.top-section .info-section .date-time .time {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+}
+
+/* Gallery Section */
+.gallery {
+  position: relative;
+}
+.gallery h6 {
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+.gallery span {
+  position: absolute;
+  right: 0px;
+  font-size: 13.33px;
+  color: #666666;
+}
+.gallery-img {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 162px);
+  gap: 24px;
+}
+.gallery-img span {
+  position: absolute;
+  right: 0px;
+}
+.gallery-img img {
+  height: 171px;
+  width: 100%;
+}
+
+/* paragraph section*/
+.section-paragraph {
+  margin-top: 64px;
+}
+.section-paragraph h6 {
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 21px;
+}
+.section-paragraph .paragraph .par1 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+.section-paragraph .paragraph .par2,
+.section-paragraph .paragraph .par3 {
+  margin-bottom: 16px;
+}
+.section-paragraph .paragraph .par4 {
+  width: 553px;
+  height: 92px;
+}
+
+.last-section {
+  display: flex;
+  margin-top: 64px;
+}
+.last-section .img-section img {
+  height: 300px;
+  width: fit-content;
+}
+.last-section .img-description {
+  margin-left: 116px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.last-section .img-description .title h4 {
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  line-height: 36px;
+  margin-bottom: 24px;
+  letter-spacing: -0.015em;
+}

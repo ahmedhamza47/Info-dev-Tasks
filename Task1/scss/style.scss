@@ -1,0 +1,185 @@
+@import "variables.scss";
+* {
+  margin: 0;
+  font-family: "Roboto";
+}
+p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #666666;
+  letter-spacing: -0.015rem;
+}
+body {
+  padding: 123px 119px 1298px 120px;
+  background: #ffffff;
+}
+@mixin font-change($fsize, $lineHeight) {
+  font-size: $fsize;
+  line-height: $lineHeight;
+}
+.top-section {
+  margin-bottom: 64px;
+  .card-section {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(6, 1fr);
+    margin-bottom: 24px;
+    .card {
+      background-color: #ffffff;
+      display: flex;
+      height: 171px;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 4px 8px 24px rgba(204, 204, 204, 0.25);
+    }
+  }
+
+  .info-section {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 21px;
+    .intro,
+    .person-info,
+    .date-time {
+      border: 1px solid $blue;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      padding: 16px;
+      height: 171px;
+      background-color: #ffffff;
+    }
+    .intro {
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      &-img img {
+        height: 32px;
+        width: 32px;
+        border-radius: 50%;
+      }
+      &-name {
+        color: black;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 100%;
+        font-family: "Nunito Sans";
+      }
+    }
+
+    .person-info {
+      display: grid;
+
+      &-title {
+        @include font-change(16px, 18.75px);
+        margin-bottom: 16px;
+      }
+      &-description {
+        @include font-change(14px, 21px);
+        color: #666666;
+      }
+      &-date {
+        text-align: end;
+        color: #666666;
+        margin-top: 27px;
+        @include font-change(12px, 14px);
+      }
+    }
+    .date-time {
+      display: grid;
+      position: relative;
+      @include font-change(12px, 14px);
+      color: #666666;
+      .date {
+        position: absolute;
+        top: 16px;
+        left: 16px;
+      }
+      .time {
+        position: absolute;
+        bottom: 16px;
+        right: 16px;
+      }
+    }
+  }
+}
+
+/* Gallery Section */
+.gallery {
+  position: relative;
+
+  h6 {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+  span {
+    position: absolute;
+    right: 0px;
+    font-size: 13.33px;
+    color: #666666;
+  }
+
+  &-img {
+    span {
+      position: absolute;
+      right: 0px;
+    }
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 162px);
+    gap: 24px;
+
+    img {
+      height: 171px;
+      width: 100%;
+    }
+  }
+}
+
+/* paragraph section*/
+
+.section-paragraph {
+  h6 {
+    font-weight: 900;
+    @include font-change(16px, 21px);
+  }
+  margin-top: 64px;
+  .paragraph {
+    .par1 {
+      margin-top: 24px;
+      margin-bottom: 16px;
+    }
+    .par2,
+    .par3 {
+      margin-bottom: 16px;
+    }
+    .par4 {
+      width: 553px;
+      height: 92px;
+    }
+  }
+}
+
+.last-section {
+  display: flex;
+  margin-top: 64px;
+
+  .img-section img {
+    height: 300px;
+    width: fit-content;
+  }
+  .img-description {
+    margin-left: 116px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .title h4 {
+      font-weight: 700;
+      font-family: "Montserrat", sans-serif;
+      @include font-change(24px, 36px);
+      margin-bottom: 24px;
+      letter-spacing: -0.015em;
+    }
+  }
+}
