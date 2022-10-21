@@ -9,6 +9,7 @@ const student = {
   rollno: 47,
 };
 const { Sname, sclass, rollno } = student;
+console.log(`--------------------ANS NO 1-------------------------- \n`);
 console.log(
   `Name: ${Sname} \nClass: \n\t Level: ${sclass.level} \n\t Sem: ${sclass.sem},\nRollNo: ${rollno} `
 );
@@ -23,17 +24,17 @@ console.log(`Length of object is ${ObjLength}`);
 
 //Ans No 2
 
-// function Cylinder(height, radius) {
-//   this.height = height;
-//   this.radius = radius;
-//   const volume = Math.PI * this.height * radius * radius;
-//   return volume.toFixed(4);
-// }
+function Cylinder(height, radius) {
+  this.height = height;
+  this.radius = radius;
+  const volume = Math.PI * this.height * radius * radius;
+  return volume.toFixed(4);
+}
 
-// const height = prompt("Enter height of cylinder:");
-// const radius = prompt("Enter radius of cylinder:");
+const height = prompt("Enter height of cylinder:");
+const radius = prompt("Enter radius of cylinder:");
 
-// alert(`The volume of cylinder is ${Cylinder(height, radius)}`);
+alert(`The volume of cylinder is ${Cylinder(height, radius)}`);
 
 //Ans No 3
 //Program to create a Clock Note. where output will come every second
@@ -77,6 +78,7 @@ const Student = {
 };
 
 const methods = FindAllMethods(Student);
+console.log(`\n--------------------ANS NO 4-------------------------- \n`);
 console.log(`The methods inside object Student is  ${methods}`);
 
 //ans no 5
@@ -89,6 +91,7 @@ const sampleObject = {
   fullName: "Hamza AHmed",
   rollNO: 47,
 };
+console.log(`\n--------------------ANS NO 5-------------------------- \n`);
 console.log(convertToKeyValuePair(sampleObject));
 
 //ans no 6
@@ -96,7 +99,7 @@ console.log(convertToKeyValuePair(sampleObject));
 
 const reversedNum = (num) =>
   parseFloat(num.toString().split("").reverse().join("")) * Math.sign(num);
-
+console.log(`\n--------------------ANS NO 6-------------------------- \n`);
 console.log(reversedNum(-1.567));
 console.log(reversedNum(260.05));
 
@@ -109,6 +112,94 @@ const combination = (str) => {
       arr.push(str.slice(i, j));
     }
   }
+
   console.log(arr);
 };
+console.log(`\n--------------------ANS NO 7-------------------------- \n`);
 combination("hamza");
+
+//ans no 8
+// JavaScript function that returns a passed string with letters in alphabetical order.
+console.log(`\n--------------------ANS NO 8-------------------------- \n`);
+const sortString = (str) => str.split("").sort().join("");
+console.log(sortString("infodev"));
+
+// ans no 9
+//JavaScript function that accepts a string as a parameter and find the longest word within the string.
+console.log(`\n--------------------ANS NO 9-------------------------- \n`);
+const longestWord = (str) =>
+  str
+    .split(" ")
+    .sort((a, b) => b.length - a.length)[0]
+    .toUpperCase();
+
+console.log(longestWord("I want to work in Info-Developers"));
+
+//ans no 10
+// Program to Count number of Vowels in String
+console.log(`\n--------------------ANS NO 10-------------------------- \n`);
+const countVowels = (str) =>
+  str
+    .toLowerCase()
+    .split("")
+    .filter((letter) => "aeiou".includes(letter)).length;
+
+console.log(`Vowels in word Hamza Ahmed is ${countVowels("Hamza Ahmed")}.`);
+const n = 5;
+
+//ans 11
+// function to generate a random number and find the factorial of the random number generated in javascript.
+console.log(`\n--------------------ANS NO 11-------------------------- \n`);
+const factorial = function (num) {
+  if (num == 0) {
+    return 1;
+  } else {
+    return num * factorial(num - 1);
+  }
+};
+const randNum = (min, max) => Math.trunc(Math.random() * (max - min) + 1) + min;
+const rNum = randNum(1, 10);
+console.log(` The factorial of ${rNum} is ${factorial(rNum)}`);
+
+//ans no 12
+// JavaScript program to check two given numbers and return true if one of the numbers is 50 or if their sum is 50.
+console.log(`\n--------------------ANS NO 12-------------------------- \n`);
+function checkFifty(a, b) {
+  return a == 50 || b == 50 || a + b == 50;
+}
+console.log(checkFifty(20, 28));
+console.log(checkFifty(25, 25));
+console.log(checkFifty(50));
+
+// JavaScript program to create a new string with the first 3 characters in lower case from a given string. If the string length is less than 3 convert all the characters in upper case.ans no 13
+console.log(`\n--------------------ANS NO 13-------------------------- \n`);
+const lower = function (str) {
+  if (str.length < 3) return str.toUpperCase();
+  else {
+    return str.substring(0, 3).toLowerCase() + str.substring(3, str.length);
+  }
+};
+console.log(lower("HAMZA")); //hamzZA
+console.log(lower("ha"));
+
+//ans no 14
+console.log(`\n--------------------ANS NO 14-------------------------- \n`);
+function arrangeAlphabets(str) {
+  let strArr = str.toLowerCase().split("");
+  let vowels = [];
+  let consonant = [];
+  for (let letter of strArr) {
+    if (["a", "e", "i", "o", "u"].includes(letter)) vowels.push(letter);
+    else consonant.push(letter);
+  }
+  vowels.sort();
+  consonant.sort();
+  return {
+    vowels,
+    consonant,
+  };
+}
+
+let { vowels, consonant } = arrangeAlphabets("InfoDevelopers");
+
+console.log(`Vowels: ${vowels}\nConsonants: ${consonant}`);
