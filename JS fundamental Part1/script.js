@@ -1,5 +1,5 @@
 // Ans no 1
-
+console.log(`--------------------ANS NO 1-------------------------- \n`);
 const student = {
   Sname: "Hamza Ahmed",
   sclass: {
@@ -9,7 +9,7 @@ const student = {
   rollno: 47,
 };
 const { Sname, sclass, rollno } = student;
-console.log(`--------------------ANS NO 1-------------------------- \n`);
+
 console.log(
   `Name: ${Sname} \nClass: \n\t Level: ${sclass.level} \n\t Sem: ${sclass.sem},\nRollNo: ${rollno} `
 );
@@ -23,7 +23,7 @@ const ObjLength = Object.keys(student).length;
 console.log(`Length of object is ${ObjLength}`);
 
 //Ans No 2
-
+/*
 function Cylinder(height, radius) {
   this.height = height;
   this.radius = radius;
@@ -35,7 +35,7 @@ const height = prompt("Enter height of cylinder:");
 const radius = prompt("Enter radius of cylinder:");
 
 alert(`The volume of cylinder is ${Cylinder(height, radius)}`);
-
+*/
 //Ans No 3
 //Program to create a Clock Note. where output will come every second
 
@@ -60,7 +60,7 @@ const clock = function () {
 clock();
 
 //ans no 4
-
+console.log(`\n--------------------ANS NO 4-------------------------- \n`);
 function FindAllMethods(obj) {
   return Object.getOwnPropertyNames(obj).filter(function (property) {
     return typeof obj[property] == "function";
@@ -78,12 +78,12 @@ const Student = {
 };
 
 const methods = FindAllMethods(Student);
-console.log(`\n--------------------ANS NO 4-------------------------- \n`);
+
 console.log(`The methods inside object Student is  ${methods}`);
 
 //ans no 5
 //Js function to convert an object intto list of [key,value ] pairs
-
+console.log(`\n--------------------ANS NO 5-------------------------- \n`);
 function convertToKeyValuePair(obj) {
   return Object.entries(obj);
 }
@@ -91,20 +91,21 @@ const sampleObject = {
   fullName: "Hamza AHmed",
   rollNO: 47,
 };
-console.log(`\n--------------------ANS NO 5-------------------------- \n`);
+
 console.log(convertToKeyValuePair(sampleObject));
 
 //ans no 6
 //JS program to reverse a number
 
+console.log(`\n--------------------ANS NO 6-------------------------- \n`);
 const reversedNum = (num) =>
   parseFloat(num.toString().split("").reverse().join("")) * Math.sign(num);
-console.log(`\n--------------------ANS NO 6-------------------------- \n`);
 console.log(reversedNum(-1.567));
 console.log(reversedNum(260.05));
 
 //ans no 7
 
+console.log(`\n--------------------ANS NO 7-------------------------- \n`);
 const combination = (str) => {
   let arr = [];
   for (let i = 0; i < str.length; i++) {
@@ -115,14 +116,15 @@ const combination = (str) => {
 
   console.log(arr);
 };
-console.log(`\n--------------------ANS NO 7-------------------------- \n`);
-combination("hamza");
+console.log("Word : hamza");
+combination(`hamza`);
 
 //ans no 8
 // JavaScript function that returns a passed string with letters in alphabetical order.
 console.log(`\n--------------------ANS NO 8-------------------------- \n`);
 const sortString = (str) => str.split("").sort().join("");
-console.log(sortString("infodev"));
+console.log("Word: infodev");
+console.log(`After Sorting : ${sortString("infodev")}`);
 
 // ans no 9
 //JavaScript function that accepts a string as a parameter and find the longest word within the string.
@@ -132,8 +134,9 @@ const longestWord = (str) =>
     .split(" ")
     .sort((a, b) => b.length - a.length)[0]
     .toUpperCase();
-
-console.log(longestWord("I want to work in Info-Developers"));
+let sentence = "I want to work in Info-Developers";
+console.log(`Sentence : ${sentence}`);
+console.log(`Longest word: ${longestWord(sentence)}`);
 
 //ans no 10
 // Program to Count number of Vowels in String
@@ -201,5 +204,5 @@ function arrangeAlphabets(str) {
 }
 
 let { vowels, consonant } = arrangeAlphabets("InfoDevelopers");
-
+console.log(`Word : InfoDevelopers`);
 console.log(`Vowels: ${vowels}\nConsonants: ${consonant}`);
