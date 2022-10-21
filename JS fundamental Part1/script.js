@@ -16,6 +16,7 @@ console.log(
 
 //delete rollno property
 delete student.rollno;
+console.log("After deletion");
 console.log(student);
 
 //length of JS object
