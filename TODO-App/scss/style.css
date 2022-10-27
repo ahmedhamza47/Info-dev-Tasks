@@ -1,3 +1,15 @@
-h1 {
-  color: blue;
+:root {
+  --dark: #374151;
+  --darker: #1f2937;
+  --darkest: #111827;
+  --light: #eee;
+  --pink: #ec4899;
+  --purple: #8b5cf6;
+  --gray: #6b7280;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Catamaran", sans-serif;
+  margin: 0;
 }
