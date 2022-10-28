@@ -26,25 +26,31 @@
     <div class="container justify-content-center text-center">
       <header>
         <h1>TODO APP</h1>
-        <form class="form" onsubmit="return false">
+        <form class="form">
           <input
             type="text"
             id="new-task-inp"
-            placeholder="Enter w hat you want to do"
+            placeholder="Enter what you want to do"
           />
-          <button type="button">Add Task</button>
+          <button type="submit" class="add-button">Add Task</button>
         </form>
       </header>
       <div class="display-tasks">
         <h2>Tasks</h2>
-        <div class="task">
-          <div class="content">
-            <input type="text" class="text" value="My tasks" readonly />
-          </div>
-          <div class="actions">
-            <button type="button" class="btn btn-outline-primary">Edit</button>
-            <button type="button" class="btn btn-outline-danger">Delete</button>
-          </div>
+        <div class="tasks">
+          <!-- <div class="task">
+            <div class="content">
+              <input type="text" class="text" value="My tasks" readonly />
+            </div>
+            <div class="actions">
+              <button type="button" class="btn btn-outline-primary">
+                Edit
+              </button>
+              <button type="button" class="btn btn-outline-danger">
+                Delete
+              </button>
+            </div>
+          </div> -->
         </div>
       </div>
     </div>

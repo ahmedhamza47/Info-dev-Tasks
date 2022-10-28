@@ -106,4 +106,6 @@ body .display-tasks .task .content .text:not(:read-only) {
 body .display-tasks .task .actions button {
   cursor: pointer;
   margin: 0 0.5rem;
+  border-radius: 5px !important;
+  padding: 5px !important;
 }
