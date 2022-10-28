@@ -26,6 +26,7 @@ window.addEventListener("load", () => {
     taskInp.setAttribute("readonly", "readonly");
     TaskContent.appendChild(taskInp);
 
+    input.value = "";
     //adding button to the tasks
     const actionElement = document.createElement("div");
     actionElement.classList.add("actions");
@@ -61,6 +62,12 @@ window.addEventListener("load", () => {
         editBtnEl.innerHTML = "Edit";
         taskInp.setAttribute("readonly", "readonly");
       }
+    });
+
+    // deleting the todo tasks
+
+    deleteBtnEl.addEventListener("click", function () {
+      list.removeChild(task_el);
     });
   });
 });
