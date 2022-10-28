@@ -3,7 +3,6 @@ window.addEventListener("load", () => {
   const input = document.querySelector("#new-task-inp");
   const list = document.querySelector(".tasks");
   const addBtn = document.querySelector(".add-button");
-
   addBtn.addEventListener("click", function (e) {
     e.preventDefault();
     const item = input.value;
@@ -50,5 +49,18 @@ window.addEventListener("load", () => {
 
     //adding all html elemtnts to .tasks
     list.appendChild(task_el);
+
+    //editing the added tasks
+
+    editBtnEl.addEventListener("click", function () {
+      if (editBtnEl.innerHTML.toLowerCase() == "edit") {
+        editBtnEl.innerHTML = "Save";
+        taskInp.removeAttribute("readonly", "readonly");
+        taskInp.focus();
+      } else {
+        editBtnEl.innerHTML = "Edit";
+        taskInp.setAttribute("readonly", "readonly");
+      }
+    });
   });
 });
