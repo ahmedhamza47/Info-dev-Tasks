@@ -17,7 +17,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: var(--dark);
+
   color: #fff;
 
   header {
@@ -39,43 +39,33 @@ body {
     #new-task-inp {
       width: max-content;
       flex: 1 1 0%;
-      background-color: var(--darker) !important;
+
       padding: 1rem;
       border-radius: 1rem;
       margin-right: 1rem;
-      color: var(--light);
+      color: var(--gray);
       font-size: 1.25rem;
       &::placeholder {
         color: var(--gray);
       }
     }
-    button {
-      color: var(--pink) !important;
-      font-size: 1.25rem;
-      font-weight: 700;
-      background-image: linear-gradient(
-        to right,
-        var(--pink),
-        var(--purple)
-      ) !important;
-      -webkit-background-clip: text !important;
-      -webkit-text-fill-color: transparent !important;
-      cursor: pointer;
-      transform: 1sec;
-      &:hover {
-        opacity: 0.8;
-      }
-      &:active {
-        opacity: 0.67;
-      }
+    .btn {
+      height: 1cm;
+      display: flex;
+      position: relative;
+      top: 10px;
+    }
+    .btn:focus,
+    .btn:active {
+      outline: none !important;
+      box-shadow: none;
     }
   }
-  input,
-  button {
-    outline: none !important;
-    background: none !important;
-    border: none !important;
-  }
+  // input {
+  //   outline: none !important;
+  //   background: none !important;
+  //   border: none !important;
+  // }
 
   .display-tasks {
     flex: 1 1 0%;
@@ -88,26 +78,37 @@ body {
       font-weight: 300;
       color: var(--gray);
       margin-bottom: 1rem;
+      text-align: initial;
+    }
+    input {
+      outline: none !important;
+      background: none !important;
+      border: none !important;
     }
     .task {
       display: flex;
+
       justify-content: space-between !important;
-      background-color: var(--darkest);
+      background-color: rgb(211, 198, 198);
       padding: 1rem;
       border-radius: 1rem;
       margin-bottom: 1rem;
 
       .content .text {
-        color: var(--light);
+        color: rgb(207, 92, 43);
         font-size: 18px;
         width: 100%;
         display: block;
         transition: 0.4s;
         &:not(:read-only) {
-          color: var(--pink);
+          color: var(--green);
         }
       }
+
       .actions button {
+        outline: none !important;
+        background: none !important;
+        border: none !important;
         cursor: pointer;
         margin: 0 0.5rem;
         border-radius: 5px !important;

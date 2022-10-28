@@ -1,5 +1,4 @@
 window.addEventListener("load", () => {
-  const form = document.querySelector(".form");
   const input = document.querySelector("#new-task-inp");
   const list = document.querySelector(".tasks");
   const addBtn = document.querySelector(".add-button");
@@ -56,11 +55,16 @@ window.addEventListener("load", () => {
     editBtnEl.addEventListener("click", function () {
       if (editBtnEl.innerHTML.toLowerCase() == "edit") {
         editBtnEl.innerHTML = "Save";
+        editBtnEl.classList.remove("btn-outline-primary");
+        editBtnEl.classList.add("btn-outline-success");
         taskInp.removeAttribute("readonly", "readonly");
         taskInp.focus();
       } else {
         editBtnEl.innerHTML = "Edit";
+        editBtnEl.classList.add("btn-outline-primary");
+        editBtnEl.classList.remove("btn-outline-success");
         taskInp.setAttribute("readonly", "readonly");
+        taskInp.focus();
       }
     });
 
