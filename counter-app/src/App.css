@@ -1,0 +1,7 @@
+.container {
+  position: relative;
+  top: 30vh;
+}
+.btns {
+  display: grid;
+}
