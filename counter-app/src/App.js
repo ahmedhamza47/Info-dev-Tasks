@@ -12,7 +12,7 @@ function App() {
         <div className="row">
           <div className="col-md-8 ">
             <div className="btns">
-              <div className="btn-increase my-5">
+              <div className="btn-increase my-5 mt-2">
                 <button
                   className="btn btn-primary ml-2"
                   onClick={() => setCounter(counter + 1)}
